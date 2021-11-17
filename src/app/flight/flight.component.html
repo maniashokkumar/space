@@ -1,0 +1,93 @@
+<div class="container">
+    <h2>SpaceX Lanch Program</h2>
+    <div class="con1">
+        <div class="year">
+            <p>Filters</p>
+            <p class="Lanch">Launch year</p>
+            <hr>
+            <table class="table1">
+                <tr>
+                    <td><button (click)="year(2006)">2006</button></td>
+                    <td><button (click)="year(2007)">2007</button></td>
+
+                </tr>
+                <tr>
+                    <td><button (click)="year(2008)">2008</button></td>
+                    <td><button (click)="year(2009)">2009</button></td>
+
+                </tr>
+                <tr>
+                    <td><button (click)="year(2010)">2010</button></td>
+                    <td><button (click)="year(2011)">2011</button></td>
+
+                </tr>
+                <tr>
+                    <td><button (click)="year(2012)">2012</button></td>
+                    <td><button (click)="year(2013)">2013</button></td>
+
+                </tr>
+                <tr>
+                    <td><button (click)="year(2014)">2014</button></td>
+                    <td><button (click)="year(2015)">2015</button></td>
+
+                </tr>
+                <tr>
+                    <td><button (click)="year(2016)">2016</button></td>
+                    <td><button (click)="year(2017)">2017</button></td>
+
+                </tr>
+                <tr>
+                    <td><button (click)="year(2018)">2018</button></td>
+                    <td><button (click)="year(2019)">2019</button></td>
+
+                </tr>
+                <tr>
+                    <td><button (click)="year(2020)">2020</button></td>
+
+
+                </tr>
+            </table>
+            <p class="Lanch">Successful Launch</p>
+            <hr>
+            <table class="table1">
+                <tr>
+                    <td><button (click)="successfullanch(true)">True</button></td>
+                    <td><button (click)="successfullanch(false)">False</button></td>
+
+                </tr>
+            </table>
+            <p class="Lanch">Successful Landing</p>
+            <hr>
+            <table class="table1">
+                <tr>
+                    <td><button (click)="successfullanding(true)">True</button></td>
+                    <td><button (click)="successfullanding(true)">False</button></td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="flight">
+            <div class="flight_con">
+                <!-- for display flex -->
+                <div class="rocket">
+                    <div *ngFor="let i of rocket_Data">
+                        <!-- for ng-for -->
+                        <div class="card">
+                            <img src="{{i.links.mission_patch}}"><br><br>
+                            <b class="heading">{{i.mission_name}} #{{i.flight_number}}</b><br><br>
+                            <b> Mission Ids:</b> {{i.mission_id[0]}}<br>
+                            <b> Launch Year:</b> {{i.launch_year}}<br>
+                            <b> Successful Launch:</b> {{i.launch_success}}<br>
+                            <b> Successfull Landing :</b> {{i.rocket.first_stage.cores[0].land_success}}
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

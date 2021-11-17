@@ -1,35 +1,27 @@
+import { expressionType } from '@angular/compiler/src/output/output_ast';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  });
+// describe("Caculator ",()=>{
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+//   let mycal=new AppComponent;
+//   it("Addation ",()=>{
+//     expect(mycal.addation(500,500)).toBe(1000);
+//   })
 
-  it(`should have as title 'demo'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('demo');
-  });
+//   it("Multiplication  ",()=>{
+//     expect(mycal.multiplication(10,20)).toBe(200);
+//   })
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('demo app is running!');
-  });
-});
+// })
+
+// describe("Caculator with div and sub  ",()=>{
+
+//   let mycal=new AppComponent;
+//   it("div  ",()=>{
+//     expect(mycal.div(10,20)).toBe(2);
+//   })
+
+// })
+
