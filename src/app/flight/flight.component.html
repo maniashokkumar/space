@@ -61,7 +61,18 @@
             <table class="table1">
                 <tr>
                     <td><button (click)="successfullanding(true)">True</button></td>
-                    <td><button (click)="successfullanding(true)">False</button></td>
+                    <td><button (click)="successfullanding(false)">False</button></td>
+
+                </tr>
+            </table>
+            <p>Selected filters</p>
+            <P>Year:{{a[0]}}</P>
+            <p>Successful Launch:{{a[1]}}</p>
+            <p>Successful Landing:{{a[2]}}</p>
+            <table class="table1">
+                <tr>
+                    <td><button class="Lanch" (click)="func2()">Apply</button></td>
+                    <td><button (click)="clear()">Clear</button></td>
 
                 </tr>
             </table>

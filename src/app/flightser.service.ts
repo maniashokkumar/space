@@ -22,5 +22,8 @@ export class FlightserService {
   successfullanding(t: any): Observable<any> {
     return this.http.get<any>("https://api.spaceXdata.com/v3/launches?limit=100&land_success=" + t);
   }
+  allfilter(year: any, launch: any, landing: any): Observable<any> {
+    return this.http.get<any>("https://api.spaceXdata.com/v3/launches?limit=100&launch_success=" + launch + "&land_success=" + landing + "&launch_year=" + year);
+  }
 
 }
