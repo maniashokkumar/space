@@ -9,9 +9,7 @@ import { FlightserService } from '../flightser.service';
 export class FlightComponent implements OnInit {
   rocket_Data: any;
   a: any = [];
-  year1 = this.a[0];
-  launch = this.a[1];
-  landing = this.a[2];
+
   constructor(private httpser: FlightserService) {
     this.rocket_Data = [];
   }
@@ -61,7 +59,7 @@ export class FlightComponent implements OnInit {
   clear() {
   
     this.a = [];
- 
+    this.ngOnInit()
 
   }
 

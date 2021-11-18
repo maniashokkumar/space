@@ -5,6 +5,7 @@
             <p>Filters</p>
             <p class="Lanch">Launch year</p>
             <hr>
+            <div class="t">
             <table class="table1">
                 <tr>
                     <td><button (click)="year(2006)">2006</button></td>
@@ -47,6 +48,7 @@
 
                 </tr>
             </table>
+        </div>
             <p class="Lanch">Successful Launch</p>
             <hr>
             <table class="table1">
@@ -85,11 +87,11 @@
                         <!-- for ng-for -->
                         <div class="card">
                             <img src="{{i.links.mission_patch}}"><br><br>
-                            <b class="heading">{{i.mission_name}} #{{i.flight_number}}</b><br><br>
-                            <b> Mission Ids:</b> {{i.mission_id[0]}}<br>
-                            <b> Launch Year:</b> {{i.launch_year}}<br>
-                            <b> Successful Launch:</b> {{i.launch_success}}<br>
-                            <b> Successfull Landing :</b> {{i.rocket.first_stage.cores[0].land_success}}
+                            <a class="heading">{{i.mission_name}} #{{i.flight_number}}</a><br><br>
+                            <a> Mission Ids:</a> {{i.mission_id[0]}}<br>
+                            <a> Launch Year:</a> {{i.launch_year}}<br>
+                            <a> Successful Launch:</a> {{i.launch_success}}<br>
+                            <a> Successfull Landing :</a> {{i.rocket.first_stage.cores[0].land_success}}
                         </div>
 
                     </div>
